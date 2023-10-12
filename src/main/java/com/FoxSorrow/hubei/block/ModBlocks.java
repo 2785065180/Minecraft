@@ -21,8 +21,9 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, HuBei.MOD_ID);
 
     public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(0.8f)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(0.01f).requiresCorrectToolForDrops(),
+                    UniformInt.of(30, 70)));
 
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)

@@ -14,8 +14,8 @@ public class ModCNLangGen extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.ZIRCON.get(), "黑曜石锭");
-        add(ModItems.RAW_ZIRCON.get(), "可以吃的黑曜石锭");
+        add(ModItems.ZIRCON.get(), "可以吃的黑曜石锭");
+        add(ModItems.RAW_ZIRCON.get(), "黑曜石锭");
         add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(),"DEEPSLATE_ZIRCON_ORE");
         add(ModBlocks.ZIRCON_ORE.get(),"ZIRCON_ORE");
         add(ModBlocks.ZIRCON_BLOCK.get(),"ZIRCON_BLOCK");
