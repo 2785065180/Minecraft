@@ -1,6 +1,7 @@
 package com.FoxSorrow.hubei.item;
 
 import com.FoxSorrow.hubei.HuBei;
+import com.FoxSorrow.hubei.item.custom.EightBallItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -19,10 +20,11 @@ public class ModItems {
     public static final RegistryObject<Item> ZIRCON = ITEMS.register("zircon",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
                     .nutrition(4)                // 设置营养价值3
-                    .saturationMod(0.6f)// 设置饱食度
-                    .effect(new MobEffectInstance(MobEffects.POISON, 3 * 20, 1), 1)
+                    .saturationMod(0.01f)// 设置饱食度
+                    .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 20*30, 1), 1f)//添加药水效果
                     .build())));
-//
+    public static final RegistryObject<Item> EIGHT_BALL  = ITEMS.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().stacksTo(1)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

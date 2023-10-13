@@ -18,7 +18,6 @@ public class ModUSLangGen extends LanguageProvider {
         add(ModItems.RAW_ZIRCON.get(), "RawSapphire");
         add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(),"DEEPSLATE_ZIRCON_ORE");
         add(ModBlocks.ZIRCON_ORE.get(),"ZIRCON_ORE");
-        add(ModBlocks.ZIRCON_BLOCK.get(),"ZIRCON_BLOCK");
         add(ModCreativeModeTab.TUTORIAL_TAB_STRING,"哈哈");
     }
 }

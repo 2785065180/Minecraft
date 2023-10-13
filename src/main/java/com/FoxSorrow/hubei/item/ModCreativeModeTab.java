@@ -19,11 +19,13 @@ public class ModCreativeModeTab {
         // 物品
         pOutput.accept(ModItems.ZIRCON.get());
         pOutput.accept(ModItems.RAW_ZIRCON.get());
+        pOutput.accept(ModItems.EIGHT_BALL.get());
         //方块
         pOutput.accept(ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
+        pOutput.accept(ModBlocks.Jumpy_Block.get());
         pOutput.accept(ModBlocks.ZIRCON_ORE.get());
-        pOutput.accept(ModBlocks.ZIRCON_BLOCK.get());
-        // 原版
+        pOutput.accept(ModBlocks.Jumpy_Block.get());
+        // 原版-砖石
         pOutput.accept(Items.DIAMOND);
     }).build());
 

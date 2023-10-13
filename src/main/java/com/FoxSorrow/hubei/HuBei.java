@@ -4,6 +4,7 @@ package com.FoxSorrow.hubei;
 import com.FoxSorrow.hubei.block.ModBlocks;
 import com.FoxSorrow.hubei.item.ModCreativeModeTab;
 import com.FoxSorrow.hubei.item.ModItems;
+import com.FoxSorrow.hubei.loot.ModLootModifiers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
@@ -27,6 +28,7 @@ public class HuBei {
         ModItems.register(modEventBus);
         //block
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         ModCreativeModeTab.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
 

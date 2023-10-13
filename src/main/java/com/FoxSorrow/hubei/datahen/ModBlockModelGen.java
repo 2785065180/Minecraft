@@ -17,7 +17,7 @@ public class ModBlockModelGen  extends BlockStateProvider {
     protected void registerStatesAndModels() {
         this.registerBlockModelAndItem(ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
         this.registerBlockModelAndItem(ModBlocks.ZIRCON_ORE.get());
-        this.registerBlockModelAndItem(ModBlocks.ZIRCON_BLOCK.get());
+        this.registerBlockModelAndItem(ModBlocks.Jumpy_Block.get());
     }
 
     public void registerBlockModelAndItem(Block block) {

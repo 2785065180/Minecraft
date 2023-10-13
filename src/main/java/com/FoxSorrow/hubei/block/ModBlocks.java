@@ -1,6 +1,7 @@
 package com.FoxSorrow.hubei.block;
 
 import com.FoxSorrow.hubei.HuBei;
+import com.FoxSorrow.hubei.block.custom.JumpyBlock;
 import com.FoxSorrow.hubei.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -19,20 +20,16 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, HuBei.MOD_ID);
-
-    public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(0.01f).requiresCorrectToolForDrops(),
-                    UniformInt.of(30, 70)));
-
     public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(0.1f).requiresCorrectToolForDrops(),
-                    UniformInt.of(30, 70)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
+                    .strength(0.1f)));
     public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(0.1f).requiresCorrectToolForDrops(),
                     UniformInt.of(30, 70)));
+    public static final RegistryObject<Block> Jumpy_Block = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.copy(Blocks.MUD)
+                    .strength(0.1f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

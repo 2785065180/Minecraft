@@ -17,25 +17,27 @@ public class ModRecipesGen extends RecipeProvider {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ZIRCON_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ZIRCON_ORE.get())
                 .pattern("###")
-                .pattern("###")
+                .pattern("#X#")
                 .pattern("###")
                 .define('#', ModItems.ZIRCON.get())
+                .define('X', ModItems.RAW_ZIRCON.get())
                 .group("hubeimod")
                 .unlockedBy("has_hubei", InventoryChangeTrigger.TriggerInstance.hasItems(
                         ItemPredicate.Builder.item().of(ModItems.ZIRCON.get()).build()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.ZIRCON.get(),9)
-                .requires(ModBlocks.ZIRCON_BLOCK.get())
+                .requires(ModBlocks.ZIRCON_ORE.get())
                 .group("hubeimod")
                 .unlockedBy("has_hubei", InventoryChangeTrigger.TriggerInstance.hasItems(
                         ItemPredicate.Builder.item().of(ModItems.ZIRCON.get()).build()))
                 .save(pWriter);
 
-
+        //熔炉配方 -输入-输出
         oreSmelting(pWriter, List.of(ModItems.RAW_ZIRCON.get()),RecipeCategory.MISC,ModItems.ZIRCON.get(),0.7f,200,"hubeimod");
+        //高卢配方-输入-输出
         oreBlasting(pWriter, List.of(ModItems.RAW_ZIRCON.get()),RecipeCategory.MISC,ModItems.ZIRCON.get(),0.7f,100,"hubeimod");
     }
 }

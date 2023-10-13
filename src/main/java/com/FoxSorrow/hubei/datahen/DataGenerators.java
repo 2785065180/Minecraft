@@ -29,7 +29,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(),blockModelGen);
         generator.addProvider(event.includeClient(),new ModItemModelGen(output, helper));
         generator.addProvider(event.includeClient(),new ModBlockModelGen(output, helper));
-        generator.addProvider(event.includeClient(),new ModUSLangGen(output,"en_us"));
+        //generator.addProvider(event.includeClient(),new ModUSLangGen(output,"en_us"));
         generator.addProvider(event.includeClient(),new ModCNLangGen(output,"zh_cn"));
         generator.addProvider(event.includeServer(),new ModRecipesGen(output));
         generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(),

@@ -22,11 +22,11 @@ public class ModBlockTagGen  extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         // 需要稿子
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ZIRCON_ORE.get())
+               // .add(ModBlocks.ZIRCON_ORE.get())
                 .add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
         // 需要铁工具以上
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.ZIRCON_ORE.get());
+                .add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
         // zircon 等级工具
 
     }
