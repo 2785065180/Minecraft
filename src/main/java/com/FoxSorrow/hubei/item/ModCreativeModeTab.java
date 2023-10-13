@@ -25,6 +25,7 @@ public class ModCreativeModeTab {
         pOutput.accept(ModBlocks.Jumpy_Block.get());
         pOutput.accept(ModBlocks.ZIRCON_ORE.get());
         pOutput.accept(ModBlocks.Jumpy_Block.get());
+        pOutput.accept(ModBlocks.ZIRCON_LAMP.get());
         // 原版-砖石
         pOutput.accept(Items.DIAMOND);
     }).build());

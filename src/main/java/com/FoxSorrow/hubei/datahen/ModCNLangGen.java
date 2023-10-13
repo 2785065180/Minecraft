@@ -14,13 +14,14 @@ public class ModCNLangGen extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        add(ModCreativeModeTab.TUTORIAL_TAB_STRING,"我的工具栏");
         add(ModItems.ZIRCON.get(), "可以吃的黑曜石锭");
         add(ModItems.EIGHT_BALL .get(), "随机数物品");
         add(ModItems.RAW_ZIRCON.get(), "黑曜石锭");
         add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(),"继承石头的方块");
         add(ModBlocks.Jumpy_Block.get(),"效果方块");
         add(ModBlocks.ZIRCON_ORE.get(),"继承泥土的方块");
-        add(ModCreativeModeTab.TUTORIAL_TAB_STRING,"我的工具栏");
+        add(ModBlocks.ZIRCON_LAMP.get(),"发光方块");
 
     }
 }

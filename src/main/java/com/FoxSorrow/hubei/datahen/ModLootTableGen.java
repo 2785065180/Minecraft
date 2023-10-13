@@ -25,10 +25,11 @@ public class ModLootTableGen extends VanillaBlockLoot {
     protected void generate() {
         //掉落自己
         dropSelf(ModBlocks.Jumpy_Block.get());
+        dropSelf(ModBlocks.ZIRCON_LAMP.get());
         //掉落设置的方块
 
-        add(ModBlocks.ZIRCON_ORE.get(), createZirconOreDrops(ModBlocks.ZIRCON_ORE.get(),ModItems.RAW_ZIRCON.get()));
-        add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(), createZirconOreDrops(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(),ModItems.ZIRCON.get()));
+        add(ModBlocks.ZIRCON_ORE.get(), createZirconOreDrops(ModBlocks.ZIRCON_ORE.get(), ModItems.RAW_ZIRCON.get()));
+        add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(), createZirconOreDrops(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(), ModItems.ZIRCON.get()));
     }
 
     protected LootTable.Builder createZirconOreDrops(Block pBlock, Item ModName) {
@@ -37,10 +38,7 @@ public class ModLootTableGen extends VanillaBlockLoot {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ForgeRegistries.BLOCKS.getEntries().stream()
-                .filter(e -> e.getKey().location().getNamespace().equals(HuBei.MOD_ID))
-                .map(Map.Entry::getValue)
-                .collect(Collectors.toList());
+        return ForgeRegistries.BLOCKS.getEntries().stream().filter(e -> e.getKey().location().getNamespace().equals(HuBei.MOD_ID)).map(Map.Entry::getValue).collect(Collectors.toList());
     }
 
 }

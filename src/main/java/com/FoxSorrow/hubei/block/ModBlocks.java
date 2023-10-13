@@ -2,6 +2,7 @@ package com.FoxSorrow.hubei.block;
 
 import com.FoxSorrow.hubei.HuBei;
 import com.FoxSorrow.hubei.block.custom.JumpyBlock;
+import com.FoxSorrow.hubei.block.custom.ZirconLampBlock;
 import com.FoxSorrow.hubei.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -30,7 +31,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> Jumpy_Block = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.copy(Blocks.MUD)
                     .strength(0.1f).requiresCorrectToolForDrops()));
-
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
