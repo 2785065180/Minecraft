@@ -23,6 +23,7 @@ public class ModItemModelGen  extends ItemModelProvider {
         itemGeneratedModel(ModItems.ZIRCON.get(), resourceItem(itemName(ModItems.ZIRCON.get())));
         itemGeneratedModel(ModItems.RAW_ZIRCON.get(), resourceItem(itemName(ModItems.RAW_ZIRCON.get())));
         itemGeneratedModel(ModItems.EIGHT_BALL.get(), resourceItem(itemName(ModItems.EIGHT_BALL.get())));
+        itemGeneratedModel(ModItems.MySwordItem.get(), resourceItem(itemName(ModItems.MySwordItem.get())));
     }
 
     private void saplingItem(Item item, ResourceLocation texture) {

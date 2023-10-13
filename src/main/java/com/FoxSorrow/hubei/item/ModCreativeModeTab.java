@@ -20,6 +20,7 @@ public class ModCreativeModeTab {
         pOutput.accept(ModItems.ZIRCON.get());
         pOutput.accept(ModItems.RAW_ZIRCON.get());
         pOutput.accept(ModItems.EIGHT_BALL.get());
+        pOutput.accept(ModItems.MySwordItem.get());
         //方块
         pOutput.accept(ModBlocks.DEEPSLATE_ZIRCON_ORE.get());
         pOutput.accept(ModBlocks.Jumpy_Block.get());

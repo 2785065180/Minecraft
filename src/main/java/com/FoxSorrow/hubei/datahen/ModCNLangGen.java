@@ -16,6 +16,7 @@ public class ModCNLangGen extends LanguageProvider {
     protected void addTranslations() {
         add(ModCreativeModeTab.TUTORIAL_TAB_STRING,"我的工具栏");
         add(ModItems.ZIRCON.get(), "可以吃的黑曜石锭");
+        add(ModItems.MySwordItem.get(), "自定义剑");
         add(ModItems.EIGHT_BALL .get(), "随机数物品");
         add(ModItems.RAW_ZIRCON.get(), "黑曜石锭");
         add(ModBlocks.DEEPSLATE_ZIRCON_ORE.get(),"继承石头的方块");
